@@ -34,6 +34,6 @@ resource "aws_route_table" "pri-route-table" {
 
 resource "aws_route_table_association" "pri-subnet1" {
   route_table_id = aws_route_table.pri-route-table.id
-  subnet_id = aws_subnet.pri_subnet1.id
+  subnet_id = aws_subnet.pri_subnet.id
 }
 
