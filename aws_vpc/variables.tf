@@ -14,12 +14,12 @@ variable "project_name" {
     description   = "this is the project name"
 
 }
-variable "cidr_pub_sub1" {
+variable "cidr_pub_sub" {
     type          = string
     description   = "this cidr is for the public subnet 1"
 }
 
-variable "cidr_pri_sub1"{
+variable "cidr_pri_sub"{
     type          = string
     description   = "this cidr is for the private subnet 1"
 }
@@ -29,47 +29,4 @@ variable "open_cidr_block" {
     description = "this is an open cidr block"
 }
 
-variable "instance_type" {
-    type          = string
-    description   = "this is an instance type"
-}
 
-variable "database_ingress_port" {
-    type          = number
-    description   = "ingress http port for database instance"
-}
-
-variable "database_ingress_protocol" {
-    type          = string 
-    description   = "this is an ingress protocol"
-}
-
-variable "database_sg_cidr_block" {
-    type          = string
-    description   = "this is a database instance's CIDR block"
-}
-
-variable "database_egress_port" {
-    type          = number
-    description   = "this is an egress protocol"
-}
-
-variable "database_egress_protocol" {
-    type          = string 
-    description   = "this is an egress protocol"
-}
-
-variable "web_sg_ssh" {
-    type          = number
-    description   = "this is SSH for a web instance"
-}
-
-variable "web_sg_protocol" {
-    type          = string
-    description   = "this is a web sg protocol "
-}
-
-variable "web_sg_http" {
-    type          = number
-    description   = "this is HTTP for a web instance"
-}
