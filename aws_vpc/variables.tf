@@ -19,30 +19,9 @@ variable "cidr_pub_sub1" {
     description   = "this cidr is for the public subnet 1"
 }
 
-variable "cidr_pub_sub2"{
-    type         = string
-    description  = "this cidr is for the public subnet 2"
-}
-
-
-variable "cidr_pub_sub3" {
-    type         = string
-    description  = "this cidr is for the public subnet 3"
-}
-
 variable "cidr_pri_sub1"{
     type          = string
     description   = "this cidr is for the private subnet 1"
-}
-
-variable "cidr_pri_sub2"{
-    type          = string
-    description   = "this cidr is for the private subnet 2"
-}
-
-variable "cidr_pri_sub3"{
-    type          = string
-    description   = "this cidr is for the private subnet 3"
 }
 
 variable "open_cidr_block" {
