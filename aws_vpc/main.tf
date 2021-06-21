@@ -24,7 +24,7 @@ resource "aws_eip" "eip_for_nat" {
 
 resource "aws_nat_gateway" "nat_gateway" {
   allocation_id = aws_eip.eip_for_nat.id  
-  subnet_id     = aws_subnet.pri_subnet1.id 
+  subnet_id     = aws_subnet.pri_subnet.id 
 
   tags = local.common_tags
 }     
