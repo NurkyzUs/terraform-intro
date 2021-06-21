@@ -1,4 +1,4 @@
-#### create 3 public subnets to associate with public RT
+#### create a public subnet to associate with public RT
 
 resource "aws_subnet" "pub_subnet1" {
   vpc_id     = aws_vpc.vpc_1.id
@@ -7,21 +7,8 @@ resource "aws_subnet" "pub_subnet1" {
   tags = local.common_tags
 }
 
-resource "aws_subnet" "pub_subnet2" {
-  vpc_id     = aws_vpc.vpc_1.id
-  cidr_block = var.cidr_pub_sub2
 
-  tags = local.common_tags
-}
-
-resource "aws_subnet" "pub_subnet3" {
-  vpc_id     = aws_vpc.vpc_1.id
-  cidr_block = var.cidr_pub_sub3
-
- tags = local.common_tags
-}
-
-#### create 3 private subnets
+#### create a private subnet to associate with private RT
 
 resource "aws_subnet" "pri_subnet1" {
   vpc_id     = aws_vpc.vpc_1.id
@@ -30,16 +17,5 @@ resource "aws_subnet" "pri_subnet1" {
   tags = local.common_tags
 }
 
-resource "aws_subnet" "pri_subnet2" {
-  vpc_id     = aws_vpc.vpc_1.id
-  cidr_block = var.cidr_pri_sub2
 
-  tags = local.common_tags
-}
-
-resource "aws_subnet" "pri_subnet3" {
-  vpc_id     = aws_vpc.vpc_1.id
-  cidr_block = var.cidr_pri_sub3
-
-  tags = local.common_tags
 

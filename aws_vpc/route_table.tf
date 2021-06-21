@@ -17,15 +17,6 @@ resource "aws_route_table_association" "pub-subnet1" {
   subnet_id = aws_subnet.pub_subnet1.id
 }
 
-resource "aws_route_table_association" "pub-subnet2" {
-  route_table_id = aws_route_table.pub-route-table.id
-  subnet_id = aws_subnet.pub_subnet2.id
-}
-
-resource "aws_route_table_association" "pub-subnet3" {
-  route_table_id = aws_route_table.pub-route-table.id
-  subnet_id = aws_subnet.pub_subnet3.id
-}
 
 #### create private route table and attach (route) it to NAT gateway###
 
@@ -46,12 +37,3 @@ resource "aws_route_table_association" "pri-subnet1" {
   subnet_id = aws_subnet.pri_subnet1.id
 }
 
-resource "aws_route_table_association" "pri-subnet2" {
-  route_table_id = aws_route_table.pri-route-table.id
-  subnet_id = aws_subnet.pri_subnet2.id
-}
-
-resource "aws_route_table_association" "pri-subnet3" {
-  route_table_id = aws_route_table.pri-route-table.id
-  subnet_id = aws_subnet.pri_subnet3.id
-}
